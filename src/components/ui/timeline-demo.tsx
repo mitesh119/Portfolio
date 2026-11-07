@@ -1,6 +1,5 @@
 import type { RefObject } from "react";
 import { Timeline } from "@/components/ui/timeline";
-import { TimelineImageSlot } from "@/components/ui/timeline-image-slot";
 import { PointDot } from "@/components/ui/point-dot";
 
 function Point({ children }: { children: React.ReactNode }) {
@@ -32,7 +31,7 @@ export function TimelineDemo({
             national presentation and a spot among the semi-finalists at
             Asian Paints.
           </p>
-          <div className="mb-8 space-y-2">
+          <div className="space-y-2">
             <Point>
               Best Oral Presentation — ICCMR-2026, Nagaland University, on
               multifunctional coating design for metal surfaces
@@ -42,16 +41,6 @@ export function TimelineDemo({
               coating research
             </Point>
             <Point>Currently holding a 9.25 CGPA in the PhD program</Point>
-          </div>
-          <div className="grid grid-cols-2 gap-4">
-            <TimelineImageSlot
-              src="/images/timeline/2026-1.jpg"
-              alt="ICCMR-2026 oral presentation"
-            />
-            <TimelineImageSlot
-              src="/images/timeline/2026-2.jpg"
-              alt="Asian Paints Alchemy Conclave 2026"
-            />
           </div>
         </div>
       ),
@@ -69,7 +58,7 @@ export function TimelineDemo({
             semi-final, a hands-on workshop in granular dynamics, and a run to
             the Inter IIT Sports Championship with the hockey team.
           </p>
-          <div className="mb-8 space-y-2">
+          <div className="space-y-2">
             <Point>
               Semi-finalist — Asian Paints Alchemy Conclave 2025, on
               &quot;PFOTS as a Smart Coating Material&quot;
@@ -88,16 +77,6 @@ export function TimelineDemo({
               Championship at IIT Ropar
             </Point>
           </div>
-          <div className="grid grid-cols-2 gap-4">
-            <TimelineImageSlot
-              src="/images/timeline/2025-1.jpg"
-              alt="Asian Paints Alchemy Conclave 2025"
-            />
-            <TimelineImageSlot
-              src="/images/timeline/2025-2.jpg"
-              alt="Springer Nature Research Ambassador"
-            />
-          </div>
         </div>
       ),
     },
@@ -114,7 +93,7 @@ export function TimelineDemo({
             and two ambassadorships that opened up the following two years of
             work.
           </p>
-          <div className="mb-8 space-y-2">
+          <div className="space-y-2">
             <Point>
               Best Poster Award — NC-ECFCS-2024, Manipur University, on
               atmospheric water harvesting nanomaterials
@@ -125,16 +104,6 @@ export function TimelineDemo({
             </Point>
             <Point>Appointed Research Ambassador, Springer Nature</Point>
             <Point>Appointed Campus Ambassador, Asian Paints</Point>
-          </div>
-          <div className="grid grid-cols-2 gap-4">
-            <TimelineImageSlot
-              src="/images/timeline/2024-1.jpg"
-              alt="Best Poster Award, NC-ECFCS-2024"
-            />
-            <TimelineImageSlot
-              src="/images/timeline/2024-2.jpg"
-              alt="Manipur University, 2024"
-            />
           </div>
         </div>
       ),
@@ -152,7 +121,7 @@ export function TimelineDemo({
             stint teaching, before the move to Ropar to start a PhD in
             Chemical Engineering.
           </p>
-          <div className="mb-8 space-y-2">
+          <div className="space-y-2">
             <Point>Chemistry Teacher, Northfield School, Nagaland (Feb–Jun 2023)</Point>
             <Point>Chemistry Tutor, All Manipur Students Union (2021–2023)</Point>
             <Point>
@@ -160,16 +129,6 @@ export function TimelineDemo({
               July 2023, as a DST-INSPIRE Senior Research Fellow
             </Point>
             <Point>Began work under Dr. Santosh Kumar Meena</Point>
-          </div>
-          <div className="grid grid-cols-2 gap-4">
-            <TimelineImageSlot
-              src="/images/timeline/2023-1.jpg"
-              alt="Joining IIT Ropar, 2023"
-            />
-            <TimelineImageSlot
-              src="/images/timeline/2023-2.jpg"
-              alt="IIT Ropar campus"
-            />
           </div>
         </div>
       ),
@@ -185,20 +144,10 @@ export function TimelineDemo({
           <p className="text-foreground/95 text-xs md:text-sm font-normal mb-8">
             Finished the Master&apos;s at the top of the class, twice over.
           </p>
-          <div className="mb-8 space-y-2">
+          <div className="space-y-2">
             <Point>MSc in Chemistry, Manipur University</Point>
             <Point>Gold Medal — top of class</Point>
             <Point>Governor&apos;s Gold Medal</Point>
-          </div>
-          <div className="grid grid-cols-2 gap-4">
-            <TimelineImageSlot
-              src="/images/timeline/2022-1.jpg"
-              alt="MSc convocation, Manipur University"
-            />
-            <TimelineImageSlot
-              src="/images/timeline/2022-2.jpg"
-              alt="Governor's Gold Medal"
-            />
           </div>
         </div>
       ),
@@ -215,19 +164,9 @@ export function TimelineDemo({
             Where it started — a Bachelor&apos;s in Chemistry, finished top of
             the class.
           </p>
-          <div className="mb-8 space-y-2">
+          <div className="space-y-2">
             <Point>BSc in Chemistry, Nagaland University</Point>
             <Point>Gold Medal — top of class</Point>
-          </div>
-          <div className="grid grid-cols-2 gap-4">
-            <TimelineImageSlot
-              src="/images/timeline/2020-1.jpg"
-              alt="BSc convocation, Nagaland University"
-            />
-            <TimelineImageSlot
-              src="/images/timeline/2020-2.jpg"
-              alt="Nagaland University"
-            />
           </div>
         </div>
       ),

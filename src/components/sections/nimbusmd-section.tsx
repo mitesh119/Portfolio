@@ -47,7 +47,7 @@ export function NimbusMDSection({ onContact }: { onContact: () => void }) {
           use.
         </SectionHeading>
         <p className="relative mt-3 text-sm font-semibold text-foreground/55">
-          {NIMBUS_LEGAL_NAME}
+          {NIMBUS_LEGAL_NAME} · Miteshkumar Moirangthem, Director &amp; CEO
         </p>
         <span className="relative mt-5 inline-flex items-center gap-2 rounded-full bg-red-500/12 px-3 py-1 text-xs font-bold uppercase tracking-[0.15em] text-red-600 dark:text-red-400">
           <Rocket className="h-3.5 w-3.5" strokeWidth={2} />

@@ -26,6 +26,21 @@ const publications: Publication[] = [
     link: "https://doi.org/10.26434/chemrxiv.15011622",
   },
   {
+    title: "Origin of Chirality in Nanobipyramids",
+    journal: "Small",
+    year: "2026",
+    authors: [
+      "Kush Kumar",
+      "Pablo Mariani",
+      "Emma Bagnouls",
+      "Ivan Rivalta",
+      "Stephane Parola",
+      "Anthony Desert",
+      "Santosh Kumar Meena",
+    ],
+    link: "https://doi.org/10.1002/smll.76340",
+  },
+  {
     title: "Decoding Membrane Biophysics for Nucleic Acid Delivery: Bridging Bilayer Simulations and Lipid Nanoparticle Functionality",
     journal: "ChemRxiv (preprint)",
     year: "2026",
@@ -108,6 +123,13 @@ const publications: Publication[] = [
     authors: ["Anjana Barange", "Meitram Niraj Luwang", "Santosh Kumar Meena"],
     link: "https://pubs.acs.org/acsodf/article/10/50/61256/3660292",
     toc: "/images/toc/toc-5.png",
+  },
+  {
+    title: "Engineering Nanoparticles for Biomedical Applications: From Theory to Experiments and Modeling",
+    journal: "Wiley (edited volume)",
+    year: "2025",
+    authors: ["Sulalit Bandyopadhyay"],
+    link: "https://doi.org/10.1002/9783527844791",
   },
   {
     title: "Investigating the Multifunctional Coating Design for Metal Surfaces: Insights from Molecular Dynamics Simulations",

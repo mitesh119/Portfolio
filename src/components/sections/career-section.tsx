@@ -26,6 +26,7 @@ const columns: { icon: LucideIcon; title: string; entries: Entry[] }[] = [
     icon: Briefcase,
     title: "Roles",
     entries: [
+      { title: "Director & CEO, NimbusMD Private Limited", meta: "Nov 2026 – present" },
       { title: "Research Ambassador, Springer Nature", meta: "2024 – 2026" },
       { title: "Campus Ambassador, Asian Paints", meta: "2024 – 2026" },
       { title: "Chemistry Teacher, Northfield School, Nagaland", meta: "Feb – Jun 2023" },
