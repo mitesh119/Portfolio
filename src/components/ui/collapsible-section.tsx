@@ -31,7 +31,7 @@ export function CollapsibleSection({
             aria-controls={panelId}
             className="group glass flex w-full items-center justify-between rounded-3xl px-6 py-5 text-left transition-shadow hover:shadow-[0_0_30px_-8px_rgba(59,130,246,0.45)] md:px-8 md:py-6"
           >
-            <span className="font-heading text-2xl uppercase tracking-[0.2em] text-foreground md:text-3xl">
+            <span className="font-heading text-xl uppercase tracking-[0.14em] text-foreground sm:text-2xl sm:tracking-[0.2em] md:text-3xl">
               {title}
             </span>
             <span

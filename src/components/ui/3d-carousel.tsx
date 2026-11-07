@@ -71,7 +71,7 @@ const Carousel = memo(
     const isScreenSizeSm = useMediaQuery("(max-width: 640px)", { initializeWithValue: false });
     const faceCount = cards.length;
     // Fixed photo size, independent of how many photos there are; the ring grows to fit them.
-    const faceWidth = isScreenSizeSm ? 62 : 123;
+    const faceWidth = isScreenSizeSm ? 104 : 123;
     const cylinderWidth = faceWidth * faceCount;
     const radius = cylinderWidth / (2 * Math.PI);
     const rotation = useMotionValue(0);

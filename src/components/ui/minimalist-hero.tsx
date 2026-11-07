@@ -67,7 +67,7 @@ export const MinimalistHero = ({
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, ease: EASE, delay: 0.5 }}
-            className="pointer-events-none relative z-30 hidden w-max max-w-none whitespace-nowrap text-center font-heading text-2xl uppercase leading-tight tracking-[0.12em] text-[#ef1c1c] drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)] sm:-mb-3 sm:block md:-mb-4 md:text-3xl md:tracking-[0.16em] lg:text-4xl"
+            className="pointer-events-none relative z-30 w-max max-w-none whitespace-nowrap text-center font-heading text-lg uppercase leading-tight tracking-[0.1em] text-[#ef1c1c] drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)] sm:-mb-3 sm:text-2xl sm:tracking-[0.12em] md:-mb-4 md:text-3xl md:tracking-[0.16em] lg:text-4xl"
           >
             {backgroundText}
           </motion.h1>
