@@ -66,14 +66,14 @@ export function CareerSection() {
                 <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/12 text-primary">
                   <Icon className="h-5 w-5" strokeWidth={1.8} />
                 </span>
-                <h3 className="text-lg font-extrabold text-foreground">{title}</h3>
+                <h3 className="text-lg  text-foreground">{title}</h3>
               </div>
               <ul className="mt-5 space-y-4">
                 {entries.map((e) => (
                   <li key={e.title} className="group flex gap-3">
                     <PointDot />
                     <div>
-                      <p className="text-sm font-semibold leading-snug text-foreground">{e.title}</p>
+                      <p className="text-sm  leading-snug text-foreground">{e.title}</p>
                       <p className="mt-0.5 text-xs text-foreground/60">{e.meta}</p>
                     </div>
                   </li>

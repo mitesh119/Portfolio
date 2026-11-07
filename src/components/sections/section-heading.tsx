@@ -13,8 +13,8 @@ export function SectionHeading({
 }) {
   return (
     <header className={cn("max-w-3xl", className)}>
-      <span className="text-xs font-bold uppercase tracking-[0.25em] text-primary">{eyebrow}</span>
-      <h2 className="mt-3 text-4xl font-extrabold tracking-tight text-foreground md:text-6xl">
+      <span className="font-mono text-xs font-medium uppercase tracking-[0.2em] text-primary">{eyebrow}</span>
+      <h2 className="mt-3 text-4xl  tracking-tight text-foreground md:text-6xl">
         {title}
       </h2>
       {children && (
@@ -26,7 +26,7 @@ export function SectionHeading({
 
 export function SubHeading({ children }: { children: React.ReactNode }) {
   return (
-    <h3 className="text-xl font-extrabold tracking-tight text-foreground md:text-2xl">{children}</h3>
+    <h3 className="text-xl  tracking-tight text-foreground md:text-2xl">{children}</h3>
   );
 }
 

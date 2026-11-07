@@ -82,7 +82,7 @@ function DockTile({
       </motion.button>
       <span
         className={cn(
-          "mt-0.5 whitespace-nowrap text-[9px] font-semibold uppercase tracking-normal transition-colors sm:text-[10px] sm:tracking-[0.06em]",
+          "mt-0.5 whitespace-nowrap text-[9px]  uppercase tracking-normal transition-colors sm:text-[10px] sm:tracking-[0.06em]",
           active ? "text-primary" : "text-foreground/55"
         )}
       >
@@ -132,7 +132,7 @@ export function SectionDock<T extends string>({
           <div className="flex items-center justify-center" style={{ height: BASE }}>
             <ThemeToggle />
           </div>
-          <span className="mt-0.5 text-[10px] font-semibold uppercase tracking-[0.06em] text-foreground/55">
+          <span className="mt-0.5 text-[10px]  uppercase tracking-[0.06em] text-foreground/55">
             Theme
           </span>
         </div>

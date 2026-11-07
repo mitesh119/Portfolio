@@ -15,10 +15,7 @@ import { GlassCard, SectionHeading, SubHeading } from "@/components/sections/sec
 export function WorkSection() {
   return (
     <div className="mx-auto w-full max-w-6xl space-y-20 px-5 pb-16 pt-16 md:px-10 md:pt-24">
-      <SectionHeading eyebrow="Work" title="Simulating matter, molecule by molecule.">
-        Molecular dynamics is the common thread, applied to coatings, nanoparticles, gels, water,
-        and drug discovery.
-      </SectionHeading>
+      <SectionHeading eyebrow="Work" title="Simulating matter, molecule by molecule." />
 
       <GlassCard className="relative overflow-hidden">
         <div
@@ -27,10 +24,10 @@ export function WorkSection() {
         />
         <div className="relative flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div>
-            <span className="text-xs font-bold uppercase tracking-[0.25em] text-foreground/55">
+            <span className="font-mono text-xs font-medium uppercase tracking-[0.2em] text-foreground/55">
               Venture · Coming soon
             </span>
-            <p className="mt-2 text-3xl font-extrabold text-red-600 dark:text-red-500 md:text-4xl">
+            <p className="mt-2 font-heading text-3xl  text-red-600 dark:text-red-500 md:text-4xl">
               NimbusMD
             </p>
             <p className="mt-2 max-w-xl text-foreground/75">
@@ -38,7 +35,7 @@ export function WorkSection() {
             </p>
             <a
               href="#nimbusmd"
-              className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-red-600 underline-offset-4 hover:underline dark:text-red-400"
+              className="mt-4 inline-flex items-center gap-1 text-sm  text-red-600 underline-offset-4 hover:underline dark:text-red-400"
             >
               Learn more
               <ArrowUpRight className="h-4 w-4" strokeWidth={2} />

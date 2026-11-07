@@ -28,7 +28,7 @@ const offerings = [
 ];
 
 const ctaClass =
-  "inline-flex items-center gap-2 whitespace-nowrap rounded-full bg-red-600 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-red-700 dark:bg-red-500 dark:text-red-950 dark:hover:bg-red-400";
+  "inline-flex items-center gap-2 whitespace-nowrap rounded-full bg-red-600 px-5 py-2.5 text-sm  text-white transition-colors hover:bg-red-700 dark:bg-red-500 dark:text-red-950 dark:hover:bg-red-400";
 
 export function NimbusMDSection({ onContact }: { onContact: () => void }) {
   return (
@@ -46,10 +46,10 @@ export function NimbusMDSection({ onContact }: { onContact: () => void }) {
           A startup I am building to bring molecular dynamics out of the lab and into practical
           use.
         </SectionHeading>
-        <p className="relative mt-3 text-sm font-semibold text-foreground/55">
+        <p className="relative mt-3 text-sm  text-foreground/55">
           {NIMBUS_LEGAL_NAME} · Miteshkumar Moirangthem, Director &amp; CEO
         </p>
-        <span className="relative mt-5 inline-flex items-center gap-2 rounded-full bg-red-500/12 px-3 py-1 text-xs font-bold uppercase tracking-[0.15em] text-red-600 dark:text-red-400">
+        <span className="relative mt-5 inline-flex items-center gap-2 rounded-full bg-red-500/12 px-3 py-1 text-xs  uppercase tracking-[0.15em] text-red-600 dark:text-red-400">
           <Rocket className="h-3.5 w-3.5" strokeWidth={2} />
           Launching soon
         </span>
@@ -63,7 +63,7 @@ export function NimbusMDSection({ onContact }: { onContact: () => void }) {
               <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-red-500/12 text-red-600 dark:text-red-500">
                 <Icon className="h-5 w-5" strokeWidth={1.8} />
               </span>
-              <h4 className="text-lg font-extrabold text-foreground">{title}</h4>
+              <h4 className="text-lg  text-foreground">{title}</h4>
               <p className="text-sm leading-relaxed text-foreground/75">{body}</p>
             </GlassCard>
           ))}
@@ -99,7 +99,7 @@ export function NimbusMDSection({ onContact }: { onContact: () => void }) {
                 href={NIMBUS_WEBSITE}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full border border-foreground/15 px-5 py-2.5 text-sm font-semibold text-foreground transition-colors hover:bg-foreground/5"
+                className="inline-flex items-center gap-2 rounded-full border border-foreground/15 px-5 py-2.5 text-sm  text-foreground transition-colors hover:bg-foreground/5"
               >
                 nimbusmd.co.in
                 <ArrowUpRight className="h-4 w-4" strokeWidth={2} />

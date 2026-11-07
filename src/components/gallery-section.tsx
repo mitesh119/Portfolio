@@ -42,7 +42,7 @@ export function GallerySection() {
   return (
     <section className="w-full">
       <div className="mx-auto max-w-2xl px-6 text-center">
-        <h2 className="text-balance text-3xl font-extrabold tracking-tight text-foreground sm:text-5xl">
+        <h2 className="text-balance text-3xl  tracking-tight text-foreground sm:text-5xl">
           Moments along the way.
         </h2>
       </div>

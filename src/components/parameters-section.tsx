@@ -45,14 +45,14 @@ export function ParametersSection() {
     <div className="grid w-full grid-cols-1 items-stretch gap-5 md:grid-cols-2">
         {/* Left — area chart */}
         <div className="flex flex-col glass rounded-3xl p-6 md:p-8">
-          <h2 className="text-xl font-extrabold text-foreground md:text-2xl">Output</h2>
+          <h2 className="text-xl  text-foreground md:text-2xl">Output</h2>
 
           <AreaChart xLabels={years} series={series} yMax={50} yStep={10} />
         </div>
 
         {/* Right — globe */}
         <div className="flex flex-col glass rounded-3xl p-6 md:p-8">
-          <h2 className="text-xl font-extrabold text-foreground md:text-2xl">Collaborator map</h2>
+          <h2 className="text-xl  text-foreground md:text-2xl">Collaborator map</h2>
           <div className="flex flex-1 items-center justify-center">
             <GlobePulse markers={markers} className="relative mx-auto w-full max-w-[220px]" />
           </div>

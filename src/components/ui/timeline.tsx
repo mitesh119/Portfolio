@@ -65,12 +65,12 @@ export const Timeline = ({
       ref={containerRef}
     >
       <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
-        <h2 className="text-lg md:text-4xl mb-4 font-bold text-blue-600 dark:text-blue-400 max-w-4xl">
+        <h2 className="text-lg md:text-4xl mb-4  text-blue-600 dark:text-blue-400 max-w-4xl">
           Timeline of my journey
         </h2>
         <p className="text-foreground/90 text-sm md:text-base max-w-sm">
           I&apos;ve been working on my startup{" "}
-          <a href="#nimbusmd" className="font-bold text-red-600 underline-offset-4 hover:underline dark:text-red-500">
+          <a href="#nimbusmd" className="text-red-600 underline-offset-4 hover:underline dark:text-red-500">
             NimbusMD
           </a> for the last year.
         </p>
@@ -94,13 +94,13 @@ export const Timeline = ({
               <div className="absolute left-3 md:left-3 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-background">
                 <span className="h-[3px] w-5 rounded-full bg-red-600 shadow-[0_0_8px_rgba(220,38,38,0.6)] dark:bg-red-500" />
               </div>
-              <h3 className="hidden md:block text-xl md:pl-20 md:text-5xl font-bold text-foreground/85 ">
+              <h3 className="hidden md:block text-xl md:pl-20 md:text-5xl  text-foreground/85 ">
                 {item.title}
               </h3>
             </div>
 
             <div className="relative pl-20 pr-4 md:pl-4 w-full">
-              <h3 className="md:hidden block text-2xl mb-4 text-left font-bold text-foreground/85">
+              <h3 className="md:hidden block text-2xl mb-4 text-left  text-foreground/85">
                 {item.title}
               </h3>
               <React.Fragment key={`content-${index}`}>{item.content}</React.Fragment>
@@ -141,12 +141,12 @@ export const Timeline = ({
                 transition={{ duration: 0.25 }}
                 className="w-56 rounded-xl border border-neutral-200 bg-white p-4 shadow-lg dark:border-neutral-800 dark:bg-neutral-900"
               >
-                <span className="text-xs font-bold text-red-600 dark:text-red-500">
+                <span className="text-xs  text-red-600 dark:text-red-500">
                   {active.title}
                 </span>
                 {active.scrub && (
                   <>
-                    <p className="mt-1 text-sm font-bold text-foreground">
+                    <p className="mt-1 text-sm  text-foreground">
                       {active.scrub.headline}
                     </p>
                     <p className="mt-1.5 text-xs leading-relaxed text-foreground/80">

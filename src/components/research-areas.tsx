@@ -1,6 +1,5 @@
 "use client";
 
-import { CloudRain, Droplet, FlaskConical, Pill, ShieldCheck, type LucideIcon } from "lucide-react";
 import { motion } from "framer-motion";
 import { TimelineImageSlot } from "@/components/ui/timeline-image-slot";
 import { PointDot } from "@/components/ui/point-dot";
@@ -213,38 +212,38 @@ const conferenceTalks: ConferenceTalk[] = [
 ];
 
 interface ResearchArea {
-  icon: LucideIcon;
   title: string;
   description: string;
+  image: string;
 }
 
 // Real research areas, drawn from the "I am a..." intro on the Bio page: metal nanoparticles, protective
 // surface coatings, hydrogels, atmospheric water harvesting, and drug discovery systems.
 const researchTopics: ResearchArea[] = [
   {
-    icon: FlaskConical,
     title: "Metal Nanoparticles",
     description: "Synthesis, characterization, and property prediction — integrating machine learning with molecular dynamics.",
+    image: "/images/gallery/proj-10.jpg",
   },
   {
-    icon: ShieldCheck,
     title: "Protective Surface Coatings",
     description: "Multifunctional coating design for metal surfaces, modeled before it's synthesized.",
+    image: "/images/toc/toc-6.png",
   },
   {
-    icon: Droplet,
     title: "Hydrogels",
     description: "Supramolecular gel self-assembly, dye absorption, and multianalyte sensing.",
+    image: "/images/gallery/proj-6.jpg",
   },
   {
-    icon: CloudRain,
     title: "Atmospheric Water Harvesting",
     description: "Rational design of nanomaterials that pull water directly from air.",
+    image: "/images/toc/toc-8.png",
   },
   {
-    icon: Pill,
     title: "Drug Discovery Systems",
     description: "Molecular dynamics applied to protein–ligand and protein–drug interaction problems.",
+    image: "/images/gallery/proj-3.jpg",
   },
 ];
 
@@ -261,13 +260,22 @@ export function ResearchTopics() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-40px" }}
           transition={{ duration: 0.45, delay: 0.06 * index }}
-          className={`glass rounded-2xl p-5 ${cardHover}`}
+          className={`glass relative flex min-h-[13rem] flex-col justify-end overflow-hidden rounded-2xl p-6 ${cardHover}`}
         >
-          <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/12 text-primary">
-            <area.icon className="h-5 w-5" strokeWidth={1.8} />
-          </span>
-          <h4 className="mt-4 text-base font-semibold text-foreground">{area.title}</h4>
-          <p className="mt-1.5 text-sm leading-relaxed text-foreground/75">{area.description}</p>
+          <div
+            aria-hidden
+            className="absolute inset-0 bg-cover bg-center opacity-40 dark:opacity-25"
+            style={{ backgroundImage: `url(${area.image})` }}
+          />
+          <div
+            aria-hidden
+            className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-background/30"
+          />
+          <span aria-hidden className="relative mb-3 h-0.5 w-8 rounded-full bg-primary" />
+          <h4 className="relative font-heading text-xl leading-snug text-foreground sm:min-h-[3.45rem]">{area.title}</h4>
+          <p className="relative mt-2 text-sm leading-relaxed text-foreground/75 sm:min-h-[5.7rem]">
+            {area.description}
+          </p>
         </motion.div>
       ))}
     </div>
@@ -306,7 +314,7 @@ export function Publications() {
                 href={pub.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-semibold text-foreground underline decoration-foreground/30 underline-offset-2 transition-colors hover:text-blue-500 hover:decoration-blue-500 dark:hover:text-blue-400 dark:hover:decoration-blue-400"
+                className="text-foreground underline decoration-foreground/30 underline-offset-2 transition-colors hover:text-blue-500 hover:decoration-blue-500 dark:hover:text-blue-400 dark:hover:decoration-blue-400"
               >
                 {pub.title}
               </a>
@@ -318,7 +326,7 @@ export function Publications() {
                     <span
                       className={
                         author === "Miteshkumar Moirangthem"
-                          ? "font-semibold text-blue-500 dark:text-blue-400"
+                          ? " text-blue-500 dark:text-blue-400"
                           : undefined
                       }
                     >

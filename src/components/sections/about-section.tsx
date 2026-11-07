@@ -1,18 +1,19 @@
 "use client";
 
-import { GraduationCap, Award, FlaskConical, UserRound, MapPin, Mail } from "lucide-react";
+import { GraduationCap, Award, Briefcase, FlaskConical, UserRound, MapPin, Mail } from "lucide-react";
 import MinimalistHeroDemo from "@/components/ui/minimalist-hero-demo";
 import { GallerySection } from "@/components/gallery-section";
 import { CONTACT_ADDRESS, CONTACT_EMAIL } from "@/components/contact-modal";
 import { GlassCard, SectionHeading, SubHeading } from "@/components/sections/section-heading";
 
 function Hl({ children }: { children: React.ReactNode }) {
-  return <span className="font-semibold text-foreground">{children}</span>;
+  return <span className="text-foreground">{children}</span>;
 }
 
 const facts = [
   { icon: GraduationCap, label: "PhD, Chemical Engineering", value: "IIT Ropar · since 2023" },
   { icon: Award, label: "Fellowship", value: "DST-INSPIRE Senior Research Fellow" },
+  { icon: Briefcase, label: "Venture", value: "Director & CEO, NimbusMD Private Limited · since Nov 2026" },
   { icon: UserRound, label: "Supervisor", value: "Dr. Santosh Kumar Meena" },
   { icon: FlaskConical, label: "Toolkit", value: "GROMACS · Gaussian · VMD · Material Studio" },
 ];
@@ -38,11 +39,21 @@ export function AboutSection() {
                 harvesting, and drug discovery systems.
               </p>
               <p className="mt-4">
-                I also serve as <Hl>Research Ambassador for Springer Nature</Hl> and{" "}
+                I am the{" "}
+                <Hl>
+                  Director &amp; CEO of{" "}
+                  <a
+                    href="#nimbusmd"
+                    className="text-red-600 underline-offset-4 hover:underline dark:text-red-500"
+                  >
+                    NimbusMD Private Limited
+                  </a>
+                </Hl>
+                , my startup. I also serve as <Hl>Research Ambassador for Springer Nature</Hl> and{" "}
                 <Hl>Campus Ambassador for Asian Paints</Hl>. I earned my <Hl>BSc (2020)</Hl> and{" "}
                 <Hl>MSc (2022)</Hl> in Chemistry from Nagaland University and Manipur University,
                 graduating top of my class with <Hl>Gold Medals</Hl> at both levels, including the{" "}
-                <Hl>Governor&apos;s Gold Medal</Hl>. I currently hold a <Hl>CGPA of 9.25</Hl>.
+                <Hl>Governor&apos;s Gold Medal</Hl>.
               </p>
             </GlassCard>
 
@@ -53,10 +64,10 @@ export function AboutSection() {
                     <Icon className="h-[18px] w-[18px]" strokeWidth={1.8} />
                   </span>
                   <div>
-                    <p className="text-xs font-semibold uppercase tracking-wider text-foreground/55">
+                    <p className="text-xs  uppercase tracking-wider text-foreground/55">
                       {label}
                     </p>
-                    <p className="text-sm font-semibold text-foreground">{value}</p>
+                    <p className="text-sm  text-foreground">{value}</p>
                   </div>
                 </div>
               ))}
@@ -81,7 +92,7 @@ export function AboutSection() {
               <Mail className="mt-0.5 h-5 w-5 shrink-0 text-primary" strokeWidth={1.8} />
               <a
                 href={`mailto:${CONTACT_EMAIL}`}
-                className="break-all text-sm font-semibold text-blue-600 underline decoration-blue-600/40 underline-offset-4 transition-colors hover:decoration-blue-600 dark:text-blue-400 dark:decoration-blue-400/40"
+                className="break-all text-sm  text-blue-600 underline decoration-blue-600/40 underline-offset-4 transition-colors hover:decoration-blue-600 dark:text-blue-400 dark:decoration-blue-400/40"
               >
                 {CONTACT_EMAIL}
               </a>
