@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { PiArrowUpRightBold, PiRocketLaunchDuotone } from "react-icons/pi";
+import { PiArrowUpRightBold, PiRocketLaunchDuotone, PiSealCheckDuotone } from "react-icons/pi";
 import {
   OngoingProjects,
   Publications,
@@ -9,7 +9,6 @@ import {
   publicationCount,
 } from "@/components/research-areas";
 import { ParametersSection } from "@/components/parameters-section";
-import { CollaboratorsMarquee } from "@/components/collaborators-marquee";
 import { GlassCard, SectionHeading, SubHeading } from "@/components/sections/section-heading";
 
 export function WorkSection() {
@@ -71,6 +70,17 @@ export function WorkSection() {
         </SubHeading>
         <GlassCard className="mt-6">
           <Publications />
+
+          <div className="mt-8 flex items-center gap-3 border-t border-border pt-6">
+            <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-current/12 text-violet-500 dark:text-violet-400">
+              <PiSealCheckDuotone className="h-5 w-5" />
+            </span>
+            <p className="text-sm leading-relaxed text-foreground/80 md:text-base">
+              I am also a peer reviewer for <span className="text-foreground">ACS</span>,{" "}
+              <span className="text-foreground">Wiley</span> and{" "}
+              <span className="text-foreground">Nature</span>.
+            </p>
+          </div>
         </GlassCard>
       </div>
 
@@ -81,19 +91,7 @@ export function WorkSection() {
         </div>
       </div>
 
-      <div>
-        <SubHeading>Output &amp; reach</SubHeading>
-        <div className="mt-6">
-          <ParametersSection />
-        </div>
-      </div>
-
-      <div>
-        <SubHeading>Collaborating institutions</SubHeading>
-        <div className="mt-6">
-          <CollaboratorsMarquee />
-        </div>
-      </div>
+      <ParametersSection />
     </div>
   );
 }

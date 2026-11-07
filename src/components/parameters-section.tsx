@@ -1,18 +1,8 @@
 "use client";
 
-import { AreaChart, type AreaSeries } from "@/components/ui/area-chart";
+import { ResearchOutput } from "@/components/research-output";
 import { GlobePulse, type GlobeMarker } from "@/components/ui/globe-pulse";
-
-// Years with a real milestone on record (from the CV / timeline / Scholar profile).
-const years = ["2020", "2022", "2023", "2024", "2025", "2026"];
-
-const series: AreaSeries[] = [
-  { label: "Papers", color: "#3b82f6", data: [0, 0, 0, 3, 9, 15] },
-  { label: "Citations", color: "#ef4444", data: [0, 0, 0, 0, 5, 44] },
-  { label: "Achievements", color: "#10b981", data: [1, 3, 4, 5, 6, 8] },
-  { label: "Collaborators", color: "#f59e0b", data: [0, 0, 1, 5, 18, 32] },
-  { label: "Positions", color: "#8b5cf6", data: [0, 0, 0, 2, 2, 3] },
-];
+import { CollaboratorsMarquee } from "@/components/collaborators-marquee";
 
 // Institution clusters for the 32 unique co-authors found across the 15
 // Scholar-indexed papers (deduplicated by name), plus the 3 collaborators
@@ -33,28 +23,27 @@ const markers: GlobeMarker[] = [
 ];
 
 /**
- * Two-column dashboard: real research metrics charted over time on the
- * left, a rotating globe marking real collaborator locations on the right —
- * pattern borrowed from 21st.dev's "Area Chart" (SubframeApp) and "Globe
- * Pulse" (cobe/shuding) references, rebuilt with the site's own theme
- * tokens and real data. Collaborator count (32) is every unique co-author
- * across the 15 papers indexed on Google Scholar, deduplicated by name.
+ * Two-panel dashboard: headline research figures with a citations-per-year
+ * chart on the left, and a rotating globe marking collaborator locations,
+ * with the collaborating institutions' logos beneath it, on the right.
+ * Globe built with cobe (see "Globe Pulse", cobe/shuding), restyled with
+ * the site's theme tokens.
  */
 export function ParametersSection() {
   return (
     <div className="grid w-full grid-cols-1 items-stretch gap-5 md:grid-cols-2">
-        {/* Left — area chart */}
+        {/* Left — headline figures and citations per year */}
         <div className="flex flex-col glass rounded-3xl p-6 md:p-8">
-          <h2 className="text-xl  text-foreground md:text-2xl">Output</h2>
-
-          <AreaChart xLabels={years} series={series} yMax={50} yStep={10} />
+          <ResearchOutput />
         </div>
 
-        {/* Right — globe */}
+        {/* Right — globe with the collaborating institutions' logos beneath it */}
         <div className="flex flex-col glass rounded-3xl p-6 md:p-8">
-          <h2 className="text-xl  text-foreground md:text-2xl">Collaborator map</h2>
           <div className="flex flex-1 items-center justify-center">
             <GlobePulse markers={markers} className="relative mx-auto w-full max-w-[220px]" />
+          </div>
+          <div className="mt-6">
+            <CollaboratorsMarquee />
           </div>
         </div>
     </div>

@@ -1,11 +1,10 @@
 "use client";
 
 import { motion, type Variants } from "framer-motion";
-import { SiInstagram, SiGooglescholar, SiResearchgate } from "react-icons/si";
+import { SiGooglescholar, SiResearchgate } from "react-icons/si";
 import { FaLinkedin } from "react-icons/fa";
 
 const socials = [
-  { label: "Instagram", href: "#", Icon: SiInstagram, color: "text-[#E4405F]", rotate: 5 },
   {
     label: "Google Scholar",
     href: "https://scholar.google.com/citations?user=6Nt1fYcAAAAJ&hl=en",

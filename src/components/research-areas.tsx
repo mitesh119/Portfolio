@@ -13,6 +13,8 @@ interface Publication {
   toc?: string;
   /** Set when the author list does not include me but I am acknowledged in the paper. */
   acknowledged?: boolean;
+  /** Edited volume: counts as a publication, but its editor is not counted as a co-author. */
+  edited?: boolean;
 }
 
 // Real, bibliographic data from Google Scholar (title / journal / year / authors — factual, not reproducing
@@ -133,6 +135,7 @@ const publications: Publication[] = [
     year: "2025",
     authors: ["Sulalit Bandyopadhyay"],
     link: "https://doi.org/10.1002/9783527844791",
+    edited: true,
   },
   {
     title: "Investigating the Multifunctional Coating Design for Metal Surfaces: Insights from Molecular Dynamics Simulations",
@@ -175,6 +178,22 @@ const publications: Publication[] = [
     toc: "/images/toc/toc-8.png",
   },
 ];
+
+const AUTHOR_NAME = "Miteshkumar Moirangthem";
+
+/** Cumulative publication and unique co-author counts at the end of each given year. */
+export function cumulativeResearchCounts(years: number[]) {
+  return years.map((year) => {
+    const upTo = publications.filter((pub) => Number(pub.year) <= year);
+    const coauthors = new Set(
+      upTo
+        .filter((pub) => !pub.edited)
+        .flatMap((pub) => pub.authors)
+        .filter((name) => name !== AUTHOR_NAME)
+    );
+    return { year, publications: upTo.length, coauthors: coauthors.size };
+  });
+}
 
 // Doubled for a seamless marquee loop.
 const tocPubs = publications.filter((pub) => pub.toc);

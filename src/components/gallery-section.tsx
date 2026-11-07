@@ -10,28 +10,8 @@ const images: CarouselImage[] = [
   { src: "/images/gallery/event-3.jpg", alt: "NC-ECFCS-2024, Manipur University" },
   { src: "/images/gallery/event-8.jpg", alt: "Intra Ropar Cricket Championship" },
   { src: "/images/gallery/event-9.jpg", alt: "Best Poster Award, NC-ECFCS-2024" },
-  { src: "/images/gallery/event-1.jpg", alt: "Research Ambassador, Springer Nature" },
   { src: "/images/gallery/event-5.jpg", alt: "Hockey team portrait" },
   { src: "/images/gallery/event-4.jpg", alt: "Hockey match in progress" },
-  { src: "/images/gallery/event-10.jpg", alt: "Asian Paints Alchemy 2025 moments" },
-  { src: "/images/gallery/event-7.jpg", alt: "Miteshkumar Moirangthem" },
-  {
-    src: "/images/gallery/publication-wiley-cover.jpg",
-    alt: "Engineering Nanoparticles for Biomedical Applications, Wiley — book chapter",
-  },
-  { src: "/images/gallery/proj-1.jpg", alt: "Molecular dynamics visualization, ongoing project" },
-  { src: "/images/gallery/proj-2.jpg", alt: "Molecular dynamics visualization, ongoing project" },
-  { src: "/images/gallery/proj-3.jpg", alt: "Molecular dynamics visualization, ongoing project" },
-  { src: "/images/gallery/proj-4.jpg", alt: "Molecular dynamics visualization, ongoing project" },
-  { src: "/images/gallery/proj-5.jpg", alt: "Molecular dynamics visualization, ongoing project" },
-  { src: "/images/gallery/proj-6.jpg", alt: "Molecular dynamics visualization, ongoing project" },
-  { src: "/images/gallery/proj-7.jpg", alt: "Molecular dynamics visualization, ongoing project" },
-  { src: "/images/gallery/proj-8.jpg", alt: "Molecular dynamics visualization, ongoing project" },
-  { src: "/images/gallery/proj-9.jpg", alt: "Molecular dynamics visualization, ongoing project" },
-  { src: "/images/gallery/proj-10.jpg", alt: "Molecular dynamics visualization, ongoing project" },
-  { src: "/images/gallery/proj-11.jpg", alt: "Molecular dynamics visualization, ongoing project" },
-  { src: "/images/gallery/proj-12.jpg", alt: "Molecular dynamics visualization, ongoing project" },
-  { src: "/images/gallery/proj-13.jpg", alt: "Molecular dynamics visualization, ongoing project" },
 ];
 
 /**
@@ -40,16 +20,8 @@ const images: CarouselImage[] = [
  */
 export function GallerySection() {
   return (
-    <section className="w-full">
-      <div className="mx-auto max-w-2xl px-6 text-center">
-        <h2 className="text-balance text-3xl  tracking-tight text-foreground sm:text-5xl">
-          Moments along the way.
-        </h2>
-      </div>
-
-      <div className="mt-8 md:mt-10">
-        <ThreeDPhotoCarousel images={images} />
-      </div>
+    <section className="w-full pt-4">
+      <ThreeDPhotoCarousel images={images} />
 
       <blockquote className="mx-auto mt-8 max-w-md px-6 text-center md:mt-10">
         <p className="text-balance text-sm italic text-foreground/90">

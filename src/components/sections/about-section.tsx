@@ -15,8 +15,8 @@ export function AboutSection() {
       <MinimalistHeroDemo />
 
       <div className="mx-auto w-full max-w-6xl px-5 md:px-10">
-        <GlassCard className="text-base leading-relaxed text-foreground/75">
-          <p>
+        <GlassCard className="text-center text-base leading-relaxed text-foreground/75 md:text-lg">
+          <p className="mx-auto max-w-3xl text-balance">
             My research asks how matter behaves at the molecular scale. I use{" "}
             <Hl>molecular dynamics</Hl> to watch nanoparticles, coatings, hydrogels, water and drug
             molecules in action, atom by atom, so the design happens on a screen before it happens

@@ -56,7 +56,7 @@ export function CareerSection() {
       <CollapsibleSection title="The path so far">
         <div className="space-y-14 pt-8 md:pt-10">
           <p className="max-w-2xl text-base leading-relaxed text-foreground/75 md:text-lg">
-            From gold medals in chemistry to simulating nanomaterials at IIT Ropar.
+            A foundation in chemistry, now applied to computational research on nanomaterials.
           </p>
 
           <div className="grid grid-cols-1 gap-5 lg:grid-cols-3">

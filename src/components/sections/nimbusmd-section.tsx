@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import {
   PiArrowUpRightBold,
   PiEnvelopeSimpleDuotone,
@@ -14,14 +15,14 @@ export const NIMBUS_LEGAL_NAME = "NimbusMD Private Limited";
 
 // Fill these in once the company has a public inbox / site; the CTA adapts automatically.
 const NIMBUS_EMAIL: string | null = null;
-const NIMBUS_WEBSITE: string | null = "https://nimbusmd.co.in";
+export const NIMBUS_WEBSITE = "https://nimbusmd.co.in";
 
 const offerings = [
   {
     icon: PiFlaskDuotone,
     color: "text-violet-500 dark:text-violet-400",
     title: "Simulation services",
-    body: "Molecular dynamics studies for industry and research groups: nanoparticles, protective coatings, hydrogels, and water and interfacial behaviour, from system setup to analysis.",
+    body: "Computational chemistry services for industry and research groups: nanoparticles, protective coatings, hydrogels, and water and interfacial behaviour, from system setup to analysis.",
   },
   {
     icon: PiStackDuotone,
@@ -50,11 +51,30 @@ export function NimbusMDSection({ onContact }: { onContact: () => void }) {
         />
         <SectionHeading
           eyebrow="Venture"
-          title={<span className="text-red-600 dark:text-red-500">NimbusMD</span>}
+          title={
+            <>
+              <Image
+                src="/images/nimbusmd/nimbusmd-horizontal.svg"
+                alt="NimbusMD"
+                width={1050}
+                height={256}
+                priority
+                className="h-12 w-auto dark:hidden md:h-[4.5rem]"
+              />
+              <Image
+                src="/images/nimbusmd/nimbusmd-horizontal-white.svg"
+                alt="NimbusMD"
+                width={1050}
+                height={256}
+                priority
+                className="hidden h-12 w-auto dark:block md:h-[4.5rem]"
+              />
+            </>
+          }
           className="relative"
         >
-          A startup I am building to bring molecular dynamics out of the lab and into practical
-          use.
+          A startup I am building to bring computational chemistry calculations out of the lab and
+          into practical use.
         </SectionHeading>
         <p className="relative mt-3 text-sm  text-foreground/55">
           {NIMBUS_LEGAL_NAME} · Miteshkumar Moirangthem, Director &amp; CEO
@@ -89,7 +109,23 @@ export function NimbusMDSection({ onContact }: { onContact: () => void }) {
         />
         <div className="relative flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
           <div>
-            <SubHeading>Work with NimbusMD</SubHeading>
+            <h3 className="flex flex-wrap items-center gap-x-1 gap-y-1 text-xl tracking-tight text-foreground md:text-2xl">
+              <span>Work with</span>
+              <Image
+                src="/images/nimbusmd/nimbusmd-horizontal.svg"
+                alt="NimbusMD"
+                width={1050}
+                height={256}
+                className="h-7 w-auto dark:hidden md:h-9"
+              />
+              <Image
+                src="/images/nimbusmd/nimbusmd-horizontal-white.svg"
+                alt="NimbusMD"
+                width={1050}
+                height={256}
+                className="hidden h-7 w-auto dark:block md:h-9"
+              />
+            </h3>
             <p className="mt-2 max-w-xl text-foreground/75">
               Interested in a simulation project, a collaboration, or early access? Get in touch.
             </p>
