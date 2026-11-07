@@ -56,7 +56,7 @@ export const MinimalistHero = ({
       onPointerMove={onPointerMove}
       onPointerLeave={onPointerLeave}
       className={cn(
-        'relative flex min-h-[100svh] w-full flex-col items-center justify-center gap-6 px-6 pb-12 pt-28 font-sans md:gap-8 md:px-12 md:pt-32',
+        'relative flex w-full flex-col items-center justify-center gap-5 px-6 pb-6 pt-28 md:min-h-[100svh] md:pb-12 font-sans md:gap-8 md:px-12 md:pt-32',
         className
       )}
     >

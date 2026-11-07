@@ -13,7 +13,7 @@ import { GlassCard, SectionHeading, SubHeading } from "@/components/sections/sec
 
 export function WorkSection() {
   return (
-    <div className="mx-auto w-full max-w-6xl space-y-20 px-5 pb-16 pt-32 md:px-10 md:pt-36">
+    <div className="mx-auto w-full max-w-6xl space-y-10 px-5 pb-10 pt-28 md:space-y-20 md:px-10 md:pb-16 md:pt-36">
       <SectionHeading title="Simulating matter, molecule by molecule." />
 
       <GlassCard className="relative overflow-hidden">
@@ -59,7 +59,7 @@ export function WorkSection() {
 
       <div>
         <SubHeading>Research areas</SubHeading>
-        <div className="mt-6">
+        <div className="mt-4 md:mt-6">
           <ResearchTopics />
         </div>
       </div>
@@ -68,10 +68,10 @@ export function WorkSection() {
         <SubHeading>
           Publications <span className="text-foreground/40">({publicationCount})</span>
         </SubHeading>
-        <GlassCard className="mt-6">
+        <GlassCard className="mt-4 md:mt-6">
           <Publications />
 
-          <div className="mt-8 flex items-center gap-3 border-t border-border pt-6">
+          <div className="mt-6 flex items-center gap-3 border-t border-border pt-5 md:mt-8 md:pt-6">
             <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-current/12 text-violet-500 dark:text-violet-400">
               <PiSealCheckDuotone className="h-5 w-5" />
             </span>
@@ -86,7 +86,7 @@ export function WorkSection() {
 
       <div>
         <SubHeading>Ongoing projects</SubHeading>
-        <div className="mt-6">
+        <div className="mt-4 md:mt-6">
           <OngoingProjects />
         </div>
       </div>

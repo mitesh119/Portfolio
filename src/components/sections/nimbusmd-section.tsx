@@ -43,7 +43,7 @@ const ctaClass =
 
 export function NimbusMDSection({ onContact }: { onContact: () => void }) {
   return (
-    <div className="mx-auto w-full max-w-6xl space-y-20 px-5 pb-16 pt-32 md:px-10 md:pt-36">
+    <div className="mx-auto w-full max-w-6xl space-y-10 px-5 pb-10 pt-28 md:space-y-20 md:px-10 md:pb-16 md:pt-36">
       <div className="relative">
         <div
           aria-hidden
@@ -87,7 +87,7 @@ export function NimbusMDSection({ onContact }: { onContact: () => void }) {
 
       <div>
         <SubHeading>What we do</SubHeading>
-        <div className="mt-6 grid grid-cols-1 gap-5 md:grid-cols-3">
+        <div className="mt-4 grid grid-cols-1 gap-4 md:mt-6 md:grid-cols-3 md:gap-5">
           {offerings.map(({ icon: Icon, color, title, body }) => (
             <GlassCard key={title} className="flex flex-col gap-4">
               <span

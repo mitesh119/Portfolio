@@ -282,7 +282,7 @@ export function ResearchTopics() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-40px" }}
           transition={{ duration: 0.45, delay: 0.06 * index }}
-          className={`glass relative flex min-h-[13rem] flex-col justify-end overflow-hidden rounded-2xl p-6 ${cardHover}`}
+          className={`glass relative flex min-h-[10.5rem] flex-col justify-end overflow-hidden rounded-2xl p-5 md:min-h-[13rem] md:p-6 ${cardHover}`}
         >
           <div
             aria-hidden

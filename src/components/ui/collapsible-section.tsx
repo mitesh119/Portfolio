@@ -22,7 +22,7 @@ export function CollapsibleSection({
 
   return (
     <section className="w-full">
-      <div className="mx-auto w-full max-w-6xl px-5 py-4 md:px-10 md:py-5">
+      <div className="mx-auto w-full max-w-6xl px-5 py-2 md:px-10 md:py-5">
         <h2>
           <button
             type="button"

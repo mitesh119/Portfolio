@@ -184,7 +184,7 @@ export function ThreeDPhotoCarousel({ images }: { images: CarouselImage[] }) {
   return (
     <div className="relative">
       {mounted ? createPortal(lightbox, document.body) : null}
-      <div className="relative h-[280px] w-full overflow-hidden md:h-[360px]">
+      <div className="relative h-[170px] w-full overflow-hidden sm:h-[280px] md:h-[360px]">
         <Carousel
           handleClick={handleClick}
           controls={controls}

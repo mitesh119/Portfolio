@@ -108,7 +108,7 @@ function TimelineBody({ data }: { data: TimelineEntry[] }) {
   const progress = useSpring(scrollYProgress, { stiffness: 120, damping: 26, mass: 0.4 });
 
   return (
-    <div className="pt-8 md:pt-10">
+    <div className="pt-5 md:pt-10">
       <p className="max-w-2xl text-base leading-relaxed text-foreground/75 md:text-lg">
         I&apos;ve been working on my startup{" "}
         <a
@@ -120,7 +120,7 @@ function TimelineBody({ data }: { data: TimelineEntry[] }) {
         for the last year.
       </p>
 
-      <div className="relative ml-[9px] mt-10">
+      <div className="relative ml-[9px] mt-6 md:mt-10">
         {/* Rail and scroll-driven progress line */}
         <span
           aria-hidden
@@ -132,7 +132,7 @@ function TimelineBody({ data }: { data: TimelineEntry[] }) {
           className="absolute bottom-0 left-0 top-0 w-0.5 origin-top -translate-x-1/2 rounded-full bg-gradient-to-b from-primary via-primary to-primary/30"
         />
 
-        <ol ref={listRef} className="relative space-y-8 md:space-y-10">
+        <ol ref={listRef} className="relative space-y-5 md:space-y-10">
           {data.map((entry, index) => (
             <TimelineCard key={entry.year} entry={entry} index={index} />
           ))}

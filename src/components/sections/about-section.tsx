@@ -27,7 +27,7 @@ export function AboutSection() {
 
       <CareerSection />
 
-      <div className="mx-auto w-full max-w-6xl space-y-20 px-5 pb-12 md:px-10">
+      <div className="mx-auto w-full max-w-6xl space-y-10 px-5 pb-8 md:space-y-20 md:px-10 md:pb-12">
         <GallerySection />
       </div>
     </>

@@ -53,7 +53,7 @@ const itemVariants: Variants = {
  */
 export function SiteFooter() {
   return (
-    <footer className="w-full overflow-hidden py-8 text-foreground">
+    <footer className="w-full overflow-hidden py-5 text-foreground md:py-8">
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -83,7 +83,7 @@ export function SiteFooter() {
 
       {/* Animated diagonal-stripe divider */}
       <motion.div
-        className="mt-10 h-10 w-full bg-[repeating-linear-gradient(315deg,currentColor_0,currentColor_1px,transparent_0,transparent_50%)] text-foreground opacity-10"
+        className="mt-6 h-8 w-full md:mt-10 md:h-10 bg-[repeating-linear-gradient(315deg,currentColor_0,currentColor_1px,transparent_0,transparent_50%)] text-foreground opacity-10"
         style={{ backgroundSize: "10px 10px" }}
         initial={{ backgroundPositionX: "0%" }}
         whileInView={{ backgroundPositionX: "100%" }}

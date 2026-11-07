@@ -52,9 +52,9 @@ const columns: { icon: IconType; color: string; title: string; entries: Entry[] 
 
 export function CareerSection() {
   return (
-    <div className="pt-16 md:pt-20">
+    <div className="pt-6 md:pt-20">
       <CollapsibleSection title="The path so far">
-        <div className="space-y-14 pt-8 md:pt-10">
+        <div className="space-y-8 pt-5 md:space-y-14 md:pt-10">
           <p className="max-w-2xl text-base leading-relaxed text-foreground/75 md:text-lg">
             A foundation in chemistry, now applied to computational research on nanomaterials.
           </p>

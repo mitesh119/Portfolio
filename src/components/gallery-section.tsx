@@ -20,10 +20,10 @@ const images: CarouselImage[] = [
  */
 export function GallerySection() {
   return (
-    <section className="w-full pt-4">
+    <section className="w-full pt-2 md:pt-4">
       <ThreeDPhotoCarousel images={images} />
 
-      <blockquote className="mx-auto mt-8 max-w-md px-6 text-center md:mt-10">
+      <blockquote className="mx-auto mt-4 max-w-md px-6 text-center md:mt-10">
         <p className="text-balance text-sm italic text-foreground/90">
           &ldquo;Nothing in life is to be feared, it is only to be understood.&rdquo;
         </p>
