@@ -2,26 +2,25 @@
 
 import { useCallback, useEffect, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion, type Variants } from "framer-motion";
-import { Atom, Briefcase, Route, UserRound } from "lucide-react";
+import { PiFlaskDuotone, PiHouseDuotone } from "react-icons/pi";
+import { NimbusMark } from "@/components/nimbusmd-mark";
 import { SectionDock, type DockSection } from "@/components/section-dock";
 import { ContactModal } from "@/components/contact-modal";
 import { SiteFooter } from "@/components/site-footer";
 import { WorkSection } from "@/components/sections/work-section";
 import { AboutSection } from "@/components/sections/about-section";
-import { CareerSection } from "@/components/sections/career-section";
 import { NimbusMDSection } from "@/components/sections/nimbusmd-section";
 
-type SectionId = "work" | "about" | "career" | "nimbusmd";
+type SectionId = "home" | "work" | "nimbusmd";
 
 const sections: DockSection<SectionId>[] = [
-  { id: "work", label: "Work", icon: Briefcase },
-  { id: "about", label: "About", icon: UserRound },
-  { id: "career", label: "Career", icon: Route },
-  { id: "nimbusmd", label: "NimbusMD", icon: Atom },
+  { id: "home", label: "Home", icon: PiHouseDuotone, color: "text-blue-500 dark:text-blue-400" },
+  { id: "work", label: "Work", icon: PiFlaskDuotone, color: "text-violet-500 dark:text-violet-400" },
+  { id: "nimbusmd", label: "NimbusMD", icon: NimbusMark, color: "text-[#0E2A47] dark:text-white" },
 ];
 
 const order = sections.map((s) => s.id);
-const DEFAULT_SECTION: SectionId = "about";
+const DEFAULT_SECTION: SectionId = "home";
 
 function isSectionId(value: string): value is SectionId {
   return (order as string[]).includes(value);
@@ -131,14 +130,13 @@ export function HomeClient() {
             exit="exit"
           >
             {view.id === "work" && <WorkSection />}
-            {view.id === "about" && <AboutSection />}
-            {view.id === "career" && <CareerSection />}
+            {view.id === "home" && <AboutSection />}
             {view.id === "nimbusmd" && <NimbusMDSection onContact={() => setContactOpen(true)} />}
           </motion.div>
         </AnimatePresence>
       </main>
 
-      <div className="pb-28">
+      <div>
         <SiteFooter />
       </div>
 

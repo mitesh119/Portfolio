@@ -1,7 +1,7 @@
 "use client";
 
 import { useTheme } from "next-themes";
-import { Moon, Sun } from "lucide-react";
+import { PiMoonDuotone, PiSunDuotone } from "react-icons/pi";
 import { useMounted } from "@/lib/use-mounted";
 
 export function ThemeToggle() {
@@ -19,13 +19,13 @@ export function ThemeToggle() {
     >
       {mounted && (
         <>
-          <Sun
-            className={`absolute h-[18px] w-[18px] transition-all duration-300 ${
+          <PiSunDuotone
+            className={`absolute h-[18px] w-[18px] text-amber-500 transition-all duration-300 ${
               isDark ? "scale-0 -rotate-90 opacity-0" : "scale-100 rotate-0 opacity-100"
             }`}
           />
-          <Moon
-            className={`absolute h-[18px] w-[18px] transition-all duration-300 ${
+          <PiMoonDuotone
+            className={`absolute h-[18px] w-[18px] text-indigo-400 transition-all duration-300 ${
               isDark ? "scale-100 rotate-0 opacity-100" : "scale-0 rotate-90 opacity-0"
             }`}
           />

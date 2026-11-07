@@ -6,15 +6,19 @@ export function SectionHeading({
   children,
   className,
 }: {
-  eyebrow: string;
+  eyebrow?: string;
   title: React.ReactNode;
   children?: React.ReactNode;
   className?: string;
 }) {
   return (
     <header className={cn("max-w-3xl", className)}>
-      <span className="font-mono text-xs font-medium uppercase tracking-[0.2em] text-primary">{eyebrow}</span>
-      <h2 className="mt-3 text-4xl  tracking-tight text-foreground md:text-6xl">
+      {eyebrow && (
+        <span className="font-mono text-xs font-medium uppercase tracking-[0.2em] text-primary">
+          {eyebrow}
+        </span>
+      )}
+      <h2 className={cn(eyebrow && "mt-3", "text-4xl tracking-tight text-foreground md:text-6xl")}>
         {title}
       </h2>
       {children && (

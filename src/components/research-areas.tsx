@@ -11,6 +11,8 @@ interface Publication {
   authors: string[];
   link: string;
   toc?: string;
+  /** Set when the author list does not include me but I am acknowledged in the paper. */
+  acknowledged?: boolean;
 }
 
 // Real, bibliographic data from Google Scholar (title / journal / year / authors — factual, not reproducing
@@ -38,6 +40,7 @@ const publications: Publication[] = [
       "Santosh Kumar Meena",
     ],
     link: "https://doi.org/10.1002/smll.76340",
+    acknowledged: true,
   },
   {
     title: "Decoding Membrane Biophysics for Nucleic Acid Delivery: Bridging Bilayer Simulations and Lipid Nanoparticle Functionality",
@@ -121,6 +124,7 @@ const publications: Publication[] = [
     year: "2025",
     authors: ["Anjana Barange", "Meitram Niraj Luwang", "Santosh Kumar Meena"],
     link: "https://pubs.acs.org/acsodf/article/10/50/61256/3660292",
+    acknowledged: true,
     toc: "/images/toc/toc-5.png",
   },
   {
@@ -195,7 +199,6 @@ const ongoingProjects: OngoingProject[] = [
   { slug: "proj-10", title: "Elucidating the Behavior of Ligand-Coated Nanoparticles on Janus Surfaces" },
   { slug: "proj-11", title: "How Metal Nanoflowers Are Formed" },
   { slug: "proj-12", title: "Tailoring Lipid Nanoparticles for RNA Delivery" },
-  { slug: "proj-13", title: "Biomolecule-Enhanced Lipid Nanoparticles for Gene Therapy" },
 ];
 
 interface ConferenceTalk {
@@ -335,6 +338,12 @@ export function Publications() {
                     {i < pub.authors.length - 1 && ", "}
                   </span>
                 ))}
+                {pub.acknowledged && (
+                  <>
+                    <span className="text-foreground/50"> · Acknowledged: </span>
+                    <span className="text-blue-500 dark:text-blue-400">Miteshkumar Moirangthem</span>
+                  </>
+                )}
               </span>
             </span>
           </li>
@@ -377,4 +386,3 @@ export function ConferenceTalks() {
 }
 
 export const publicationCount = publications.length;
-export const projectCount = ongoingProjects.length;

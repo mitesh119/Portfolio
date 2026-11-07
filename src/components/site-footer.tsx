@@ -5,23 +5,26 @@ import { SiInstagram, SiGooglescholar, SiResearchgate } from "react-icons/si";
 import { FaLinkedin } from "react-icons/fa";
 
 const socials = [
-  { label: "Instagram", href: "#", Icon: SiInstagram, rotate: 5 },
+  { label: "Instagram", href: "#", Icon: SiInstagram, color: "text-[#E4405F]", rotate: 5 },
   {
     label: "Google Scholar",
     href: "https://scholar.google.com/citations?user=6Nt1fYcAAAAJ&hl=en",
     Icon: SiGooglescholar,
+    color: "text-[#4285F4]",
     rotate: -5,
   },
   {
     label: "ResearchGate",
     href: "https://www.researchgate.net/profile/Miteshkumar-Moirangthem",
     Icon: SiResearchgate,
+    color: "text-[#00B5A5] dark:text-[#00CCBB]",
     rotate: 5,
   },
   {
     label: "LinkedIn",
     href: "https://www.linkedin.com/in/mitesh-moirangthem/",
     Icon: FaLinkedin,
+    color: "text-[#0A66C2] dark:text-[#4C9BE8]",
     rotate: -5,
   },
 ];
@@ -60,7 +63,7 @@ export function SiteFooter() {
         className="mx-auto flex w-full max-w-7xl flex-col items-center gap-6 px-8 md:px-12"
       >
         <motion.div variants={itemVariants} className="flex items-center gap-6">
-          {socials.map(({ label, href, Icon, rotate }) => (
+          {socials.map(({ label, href, Icon, color, rotate }) => (
             <motion.a
               key={label}
               href={href}
@@ -68,7 +71,7 @@ export function SiteFooter() {
               rel="noopener noreferrer"
               aria-label={label}
               title={label}
-              className="text-foreground/85 transition-colors duration-200 hover:text-blue-500 hover:drop-shadow-[0_0_10px_rgba(59,130,246,0.85)] dark:hover:text-blue-400"
+              className={`${color} transition-[filter] duration-200 hover:drop-shadow-[0_0_10px_currentColor]`}
               whileHover={{ scale: 1.2, rotate }}
               whileTap={{ scale: 0.9 }}
               transition={{ type: "spring", stiffness: 400, damping: 17 }}

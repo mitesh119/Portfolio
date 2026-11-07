@@ -25,7 +25,7 @@ export const MinimalistHero = ({
   return (
     <div
       className={cn(
-        'relative flex min-h-[100svh] w-full flex-col items-center justify-between px-6 pb-36 pt-10 font-sans md:px-12 md:pt-12',
+        'relative flex min-h-[100svh] w-full flex-col items-center justify-between px-6 pb-12 pt-28 font-sans md:px-12 md:pt-32',
         className
       )}
     >

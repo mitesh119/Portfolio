@@ -1,20 +1,23 @@
 "use client";
 
-import { Award, Briefcase, GraduationCap, type LucideIcon } from "lucide-react";
+import type { IconType } from "react-icons";
+import { PiBriefcaseDuotone, PiGraduationCapDuotone, PiMedalDuotone } from "react-icons/pi";
 import { motion } from "framer-motion";
 import { TimelineDemo } from "@/components/ui/timeline-demo";
 import { PointDot } from "@/components/ui/point-dot";
 import { ConferenceTalks } from "@/components/research-areas";
-import { SectionHeading, SubHeading } from "@/components/sections/section-heading";
+import { SubHeading } from "@/components/sections/section-heading";
+import { CollapsibleSection } from "@/components/ui/collapsible-section";
 
 interface Entry {
   title: string;
   meta: string;
 }
 
-const columns: { icon: LucideIcon; title: string; entries: Entry[] }[] = [
+const columns: { icon: IconType; color: string; title: string; entries: Entry[] }[] = [
   {
-    icon: GraduationCap,
+    icon: PiGraduationCapDuotone,
+    color: "text-blue-500 dark:text-blue-400",
     title: "Education",
     entries: [
       { title: "PhD, Chemical Engineering — IIT Ropar", meta: "2023 – present · DST-INSPIRE SRF · CGPA 9.25" },
@@ -23,7 +26,8 @@ const columns: { icon: LucideIcon; title: string; entries: Entry[] }[] = [
     ],
   },
   {
-    icon: Briefcase,
+    icon: PiBriefcaseDuotone,
+    color: "text-violet-500 dark:text-violet-400",
     title: "Roles",
     entries: [
       { title: "Director & CEO, NimbusMD Private Limited", meta: "Nov 2026 – present" },
@@ -34,7 +38,8 @@ const columns: { icon: LucideIcon; title: string; entries: Entry[] }[] = [
     ],
   },
   {
-    icon: Award,
+    icon: PiMedalDuotone,
+    color: "text-amber-500 dark:text-amber-400",
     title: "Honors",
     entries: [
       { title: "Best Oral Presentation", meta: "ICCMR-2026, Nagaland University" },
@@ -47,49 +52,53 @@ const columns: { icon: LucideIcon; title: string; entries: Entry[] }[] = [
 
 export function CareerSection() {
   return (
-    <div className="pt-16 md:pt-24">
-      <div className="mx-auto w-full max-w-6xl space-y-20 px-5 md:px-10">
-        <SectionHeading eyebrow="Career" title="The path so far.">
-          From gold medals in chemistry to simulating nanomaterials at IIT Ropar.
-        </SectionHeading>
+    <div className="pt-16 md:pt-20">
+      <CollapsibleSection title="The path so far">
+        <div className="space-y-14 pt-8 md:pt-10">
+          <p className="max-w-2xl text-base leading-relaxed text-foreground/75 md:text-lg">
+            From gold medals in chemistry to simulating nanomaterials at IIT Ropar.
+          </p>
 
-        <div className="grid grid-cols-1 gap-5 lg:grid-cols-3">
-          {columns.map(({ icon: Icon, title, entries }, i) => (
-            <motion.div
-              key={title}
-              initial={{ opacity: 0, y: 18 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.15 + i * 0.08, ease: [0.22, 1, 0.36, 1] }}
-              className="glass rounded-3xl p-6"
-            >
-              <div className="flex items-center gap-3">
-                <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/12 text-primary">
-                  <Icon className="h-5 w-5" strokeWidth={1.8} />
-                </span>
-                <h3 className="text-lg  text-foreground">{title}</h3>
-              </div>
-              <ul className="mt-5 space-y-4">
-                {entries.map((e) => (
-                  <li key={e.title} className="group flex gap-3">
-                    <PointDot />
-                    <div>
-                      <p className="text-sm  leading-snug text-foreground">{e.title}</p>
-                      <p className="mt-0.5 text-xs text-foreground/60">{e.meta}</p>
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-          ))}
-        </div>
+          <div className="grid grid-cols-1 gap-5 lg:grid-cols-3">
+            {columns.map(({ icon: Icon, color, title, entries }, i) => (
+              <motion.div
+                key={title}
+                initial={{ opacity: 0, y: 18 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 + i * 0.08, ease: [0.22, 1, 0.36, 1] }}
+                className="glass rounded-3xl p-6"
+              >
+                <div className="flex items-center gap-3">
+                  <span
+                    className={`flex h-10 w-10 items-center justify-center rounded-xl bg-current/12 ${color}`}
+                  >
+                    <Icon className="h-5 w-5" />
+                  </span>
+                  <h3 className="text-lg text-foreground">{title}</h3>
+                </div>
+                <ul className="mt-5 space-y-4">
+                  {entries.map((e) => (
+                    <li key={e.title} className="group flex gap-3">
+                      <PointDot />
+                      <div>
+                        <p className="text-sm leading-snug text-foreground">{e.title}</p>
+                        <p className="mt-0.5 text-xs text-foreground/60">{e.meta}</p>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
+          </div>
 
-        <div>
-          <SubHeading>Conferences &amp; talks</SubHeading>
-          <div className="mt-6">
-            <ConferenceTalks />
+          <div>
+            <SubHeading>Conferences &amp; talks</SubHeading>
+            <div className="mt-6">
+              <ConferenceTalks />
+            </div>
           </div>
         </div>
-      </div>
+      </CollapsibleSection>
 
       <TimelineDemo />
     </div>

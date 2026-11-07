@@ -1,6 +1,13 @@
 "use client";
 
-import { ArrowUpRight, FlaskConical, Layers, Mail, Pill, Rocket } from "lucide-react";
+import {
+  PiArrowUpRightBold,
+  PiEnvelopeSimpleDuotone,
+  PiFlaskDuotone,
+  PiPillDuotone,
+  PiRocketLaunchDuotone,
+  PiStackDuotone,
+} from "react-icons/pi";
 import { GlassCard, SectionHeading, SubHeading } from "@/components/sections/section-heading";
 
 export const NIMBUS_LEGAL_NAME = "NimbusMD Private Limited";
@@ -11,17 +18,20 @@ const NIMBUS_WEBSITE: string | null = "https://nimbusmd.co.in";
 
 const offerings = [
   {
-    icon: FlaskConical,
+    icon: PiFlaskDuotone,
+    color: "text-violet-500 dark:text-violet-400",
     title: "Simulation services",
     body: "Molecular dynamics studies for industry and research groups: nanoparticles, protective coatings, hydrogels, and water and interfacial behaviour, from system setup to analysis.",
   },
   {
-    icon: Layers,
+    icon: PiStackDuotone,
+    color: "text-blue-500 dark:text-blue-400",
     title: "Software & platform",
     body: "Tooling that makes simulation workflows repeatable, so setting up, running and interpreting molecular dynamics takes less expert time.",
   },
   {
-    icon: Pill,
+    icon: PiPillDuotone,
+    color: "text-emerald-500 dark:text-emerald-400",
     title: "Research & drug discovery",
     body: "In-house research and partnerships applying simulation to drug discovery systems and molecular-scale design.",
   },
@@ -32,7 +42,7 @@ const ctaClass =
 
 export function NimbusMDSection({ onContact }: { onContact: () => void }) {
   return (
-    <div className="mx-auto w-full max-w-6xl space-y-20 px-5 pb-16 pt-16 md:px-10 md:pt-24">
+    <div className="mx-auto w-full max-w-6xl space-y-20 px-5 pb-16 pt-32 md:px-10 md:pt-36">
       <div className="relative">
         <div
           aria-hidden
@@ -50,7 +60,7 @@ export function NimbusMDSection({ onContact }: { onContact: () => void }) {
           {NIMBUS_LEGAL_NAME} · Miteshkumar Moirangthem, Director &amp; CEO
         </p>
         <span className="relative mt-5 inline-flex items-center gap-2 rounded-full bg-red-500/12 px-3 py-1 text-xs  uppercase tracking-[0.15em] text-red-600 dark:text-red-400">
-          <Rocket className="h-3.5 w-3.5" strokeWidth={2} />
+          <PiRocketLaunchDuotone className="h-3.5 w-3.5" />
           Launching soon
         </span>
       </div>
@@ -58,10 +68,12 @@ export function NimbusMDSection({ onContact }: { onContact: () => void }) {
       <div>
         <SubHeading>What we do</SubHeading>
         <div className="mt-6 grid grid-cols-1 gap-5 md:grid-cols-3">
-          {offerings.map(({ icon: Icon, title, body }) => (
+          {offerings.map(({ icon: Icon, color, title, body }) => (
             <GlassCard key={title} className="flex flex-col gap-4">
-              <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-red-500/12 text-red-600 dark:text-red-500">
-                <Icon className="h-5 w-5" strokeWidth={1.8} />
+              <span
+                className={`flex h-11 w-11 items-center justify-center rounded-2xl bg-current/12 ${color}`}
+              >
+                <Icon className="h-5 w-5" />
               </span>
               <h4 className="text-lg  text-foreground">{title}</h4>
               <p className="text-sm leading-relaxed text-foreground/75">{body}</p>
@@ -85,12 +97,12 @@ export function NimbusMDSection({ onContact }: { onContact: () => void }) {
           <div className="flex flex-wrap gap-3">
             {NIMBUS_EMAIL ? (
               <a href={`mailto:${NIMBUS_EMAIL}`} className={ctaClass}>
-                <Mail className="h-4 w-4" strokeWidth={2} />
+                <PiEnvelopeSimpleDuotone className="h-4 w-4" />
                 {NIMBUS_EMAIL}
               </a>
             ) : (
               <button type="button" onClick={onContact} className={ctaClass}>
-                <Mail className="h-4 w-4" strokeWidth={2} />
+                <PiEnvelopeSimpleDuotone className="h-4 w-4" />
                 Get in touch
               </button>
             )}
@@ -102,7 +114,7 @@ export function NimbusMDSection({ onContact }: { onContact: () => void }) {
                 className="inline-flex items-center gap-2 rounded-full border border-foreground/15 px-5 py-2.5 text-sm  text-foreground transition-colors hover:bg-foreground/5"
               >
                 nimbusmd.co.in
-                <ArrowUpRight className="h-4 w-4" strokeWidth={2} />
+                <PiArrowUpRightBold className="h-4 w-4" />
               </a>
             )}
           </div>
