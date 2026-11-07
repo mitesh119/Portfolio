@@ -1,10 +1,11 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { createPortal } from "react-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { DotPattern } from "@/components/ui/dot-pattern";
+import { useMounted } from "@/lib/use-mounted";
 
 interface ModalProps {
   open: boolean;
@@ -19,11 +20,7 @@ interface ModalProps {
  * stacks correctly even when opened from inside another Modal (nested popups).
  */
 export function Modal({ open, onClose, children, panelClassName }: ModalProps) {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+  const mounted = useMounted();
 
   useEffect(() => {
     if (!open) return;

@@ -2,20 +2,22 @@
 
 import { useCallback, useEffect, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion, type Variants } from "framer-motion";
-import { Briefcase, Route, UserRound } from "lucide-react";
+import { Atom, Briefcase, Route, UserRound } from "lucide-react";
 import { SectionDock, type DockSection } from "@/components/section-dock";
 import { ContactModal } from "@/components/contact-modal";
 import { SiteFooter } from "@/components/site-footer";
 import { WorkSection } from "@/components/sections/work-section";
 import { AboutSection } from "@/components/sections/about-section";
 import { CareerSection } from "@/components/sections/career-section";
+import { NimbusMDSection } from "@/components/sections/nimbusmd-section";
 
-type SectionId = "work" | "about" | "career";
+type SectionId = "work" | "about" | "career" | "nimbusmd";
 
 const sections: DockSection<SectionId>[] = [
   { id: "work", label: "Work", icon: Briefcase },
   { id: "about", label: "About", icon: UserRound },
   { id: "career", label: "Career", icon: Route },
+  { id: "nimbusmd", label: "NimbusMD", icon: Atom },
 ];
 
 const order = sections.map((s) => s.id);
@@ -131,6 +133,7 @@ export function HomeClient() {
             {view.id === "work" && <WorkSection />}
             {view.id === "about" && <AboutSection />}
             {view.id === "career" && <CareerSection />}
+            {view.id === "nimbusmd" && <NimbusMDSection onContact={() => setContactOpen(true)} />}
           </motion.div>
         </AnimatePresence>
       </main>

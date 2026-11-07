@@ -82,7 +82,7 @@ function DockTile({
       </motion.button>
       <span
         className={cn(
-          "mt-0.5 text-[10px] font-semibold uppercase tracking-[0.06em] transition-colors",
+          "mt-0.5 whitespace-nowrap text-[9px] font-semibold uppercase tracking-normal transition-colors sm:text-[10px] sm:tracking-[0.06em]",
           active ? "text-primary" : "text-foreground/55"
         )}
       >
@@ -112,7 +112,7 @@ export function SectionDock<T extends string>({
       <div
         onMouseMove={(e) => mouseX.set(e.clientX)}
         onMouseLeave={() => mouseX.set(Infinity)}
-        className="glass flex items-end gap-3 rounded-[1.75rem] px-3 pb-2 pt-2.5"
+        className="glass flex items-end gap-1 rounded-[1.75rem] px-2 pb-2 pt-2.5 sm:gap-3 sm:px-3"
       >
         {sections.map((s) => (
           <DockTile

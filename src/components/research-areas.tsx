@@ -11,13 +11,48 @@ interface Publication {
   year: string;
   authors: string[];
   link: string;
-  toc: string;
+  toc?: string;
 }
 
 // Real, bibliographic data from Google Scholar (title / journal / year / authors — factual, not reproducing
 // article content), ordered newest to oldest by exact publication date. `link` is each paper's DOI/publisher
 // landing page (from Scholar); `toc` is the paper's own TOC graphic, mirrored from the author's Sites page.
 const publications: Publication[] = [
+  {
+    title: "Cholesterol Condensation and Phospholipid Convergence in cis-ssPalmO-phe Bilayers: A Molecular Dynamics Study",
+    journal: "ChemRxiv (preprint)",
+    year: "2026",
+    authors: ["Anjana Barange", "Miteshkumar Moirangthem", "Santosh Kumar Meena"],
+    link: "https://doi.org/10.26434/chemrxiv.15011622",
+  },
+  {
+    title: "Decoding Membrane Biophysics for Nucleic Acid Delivery: Bridging Bilayer Simulations and Lipid Nanoparticle Functionality",
+    journal: "ChemRxiv (preprint)",
+    year: "2026",
+    authors: ["Anjana Barange", "Miteshkumar Moirangthem", "Santosh Kumar Meena"],
+    link: "https://doi.org/10.26434/chemrxiv.15008480",
+  },
+  {
+    title: "Unit-Cell Molecular Dynamics Framework for Cross-Linked Hydrogels: Linking Cross-Link Density, Hydration Shells, and Swelling",
+    journal: "ChemRxiv (preprint)",
+    year: "2026",
+    authors: ["Miteshkumar Moirangthem", "Tanu Tiwari", "Karthik Pushpavanam", "Santosh Kumar Meena"],
+    link: "https://doi.org/10.26434/chemrxiv.15008483",
+  },
+  {
+    title: "Tailoring the Fusogenic Properties of cis-ssPalmO-phe Based Lipid Nanoparticles for mRNA Delivery",
+    journal: "ChemRxiv (preprint)",
+    year: "2026",
+    authors: ["Anjana Barange", "Miteshkumar Moirangthem", "Meitram Niraj Luwang", "Santosh Kumar Meena"],
+    link: "https://doi.org/10.26434/chemrxiv.15008485",
+  },
+  {
+    title: "Facet Selective Adsorption and Mobility of Anthracene Based Nanocars on Gold Surfaces",
+    journal: "ChemRxiv (preprint)",
+    year: "2026",
+    authors: ["Kush Kumar", "Miteshkumar Moirangthem", "Santosh Kumar Meena"],
+    link: "https://doi.org/10.26434/chemrxiv.15008484",
+  },
   {
     title:
       "Integrated Machine Learning and Molecular Dynamics for Functional Nanoparticle Design: Synthesis, Characterization, Force-Field Development, and Property Prediction",
@@ -117,7 +152,8 @@ const publications: Publication[] = [
 ];
 
 // Doubled for a seamless marquee loop.
-const tocTrack = [...publications, ...publications];
+const tocPubs = publications.filter((pub) => pub.toc);
+const tocTrack = [...tocPubs, ...tocPubs];
 
 interface OngoingProject {
   slug: string;

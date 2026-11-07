@@ -70,7 +70,9 @@ export const Timeline = ({
         </h2>
         <p className="text-foreground/90 text-sm md:text-base max-w-sm">
           I&apos;ve been working on my startup{" "}
-          <span className="font-bold text-red-600 dark:text-red-500">NimbusMD</span> for the last year.
+          <a href="#nimbusmd" className="font-bold text-red-600 underline-offset-4 hover:underline dark:text-red-500">
+            NimbusMD
+          </a> for the last year.
         </p>
       </div>
 

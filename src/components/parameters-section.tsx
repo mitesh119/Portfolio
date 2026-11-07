@@ -8,7 +8,7 @@ const years = ["2020", "2022", "2023", "2024", "2025", "2026"];
 
 const series: AreaSeries[] = [
   { label: "Papers", color: "#3b82f6", data: [0, 0, 0, 3, 9, 15] },
-  { label: "Citations", color: "#ef4444", data: [0, 0, 0, 0, 24, 27] },
+  { label: "Citations", color: "#ef4444", data: [0, 0, 0, 0, 5, 44] },
   { label: "Achievements", color: "#10b981", data: [1, 3, 4, 5, 6, 8] },
   { label: "Collaborators", color: "#f59e0b", data: [0, 0, 1, 5, 18, 25] },
   { label: "Positions", color: "#8b5cf6", data: [0, 0, 0, 2, 2, 2] },
@@ -36,7 +36,7 @@ const markers: GlobeMarker[] = [
  * pattern borrowed from 21st.dev's "Area Chart" (SubframeApp) and "Globe
  * Pulse" (cobe/shuding) references, rebuilt with the site's own theme
  * tokens and real data. Collaborator count (25) is every unique co-author
- * across the 8 papers indexed on Google Scholar, deduplicated by name.
+ * across the 8 journal papers indexed on Google Scholar, deduplicated by name.
  */
 export function ParametersSection() {
   return (
@@ -45,7 +45,7 @@ export function ParametersSection() {
         <div className="flex flex-col glass rounded-3xl p-6 md:p-8">
           <h2 className="text-xl font-extrabold text-foreground md:text-2xl">Output</h2>
 
-          <AreaChart xLabels={years} series={series} yMax={30} yStep={10} />
+          <AreaChart xLabels={years} series={series} yMax={50} yStep={10} />
         </div>
 
         {/* Right — globe */}

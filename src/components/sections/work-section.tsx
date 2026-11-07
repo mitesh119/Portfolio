@@ -1,6 +1,6 @@
 "use client";
 
-import { Rocket } from "lucide-react";
+import { ArrowUpRight, Rocket } from "lucide-react";
 import {
   OngoingProjects,
   Publications,
@@ -34,8 +34,15 @@ export function WorkSection() {
               NimbusMD
             </p>
             <p className="mt-2 max-w-xl text-foreground/75">
-              My startup is launching soon. Stay tuned.
+              NimbusMD Private Limited, my startup, is launching soon.
             </p>
+            <a
+              href="#nimbusmd"
+              className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-red-600 underline-offset-4 hover:underline dark:text-red-400"
+            >
+              Learn more
+              <ArrowUpRight className="h-4 w-4" strokeWidth={2} />
+            </a>
           </div>
           <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-red-500/12 text-red-600 dark:text-red-500">
             <Rocket className="h-7 w-7" strokeWidth={1.8} />

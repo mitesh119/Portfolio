@@ -9,6 +9,7 @@ import {
   useMotionValue,
   useTransform,
 } from "framer-motion";
+import { useMounted } from "@/lib/use-mounted";
 
 type AnimationControls = ReturnType<typeof useAnimation>;
 
@@ -140,13 +141,9 @@ Carousel.displayName = "Carousel";
 export function ThreeDPhotoCarousel({ images }: { images: CarouselImage[] }) {
   const [activeImg, setActiveImg] = useState<string | null>(null);
   const [isCarouselActive, setIsCarouselActive] = useState(true);
-  const [mounted, setMounted] = useState(false);
+  const mounted = useMounted();
   const controls = useAnimation();
   const cards = useMemo(() => images, [images]);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   const handleClick = (imgUrl: string) => {
     setActiveImg(imgUrl);
